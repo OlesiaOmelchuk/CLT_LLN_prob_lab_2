@@ -20,6 +20,11 @@ output:
 -   The **team id number** referred to in tasks is the **two-digit** ordinal number of your team on the list. Include the line **set.seed(team id number)** at the beginning of your code to make your calculations reproducible. Also observe that the answers **do** depend on this number!\
 -   Take into account that not complying with these instructions may result in point deduction regardless of whether or not your implementation is correct.
 
+### Work-breakdown structure:
+Task 1 - Omelchuk Olesia
+Task 2 - Baranovska Tetiana
+Task 3 - Shamanskyi Kyrylo
+
 ### Task 1
 
 #### In this task, we discuss the $[7,4]$ Hamming code and investigate its reliability. That coding system can correct single errors in the transmission of $4$-bit messages and proceeds as follows:
