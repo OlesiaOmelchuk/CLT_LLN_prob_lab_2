@@ -21,9 +21,8 @@ output:
 -   Take into account that not complying with these instructions may result in point deduction regardless of whether or not your implementation is correct.
 
 ### Work-breakdown structure:
-Task 1 - Omelchuk Olesia
-Task 2 - Baranovska Tetiana
-Task 3 - Shamanskyi Kyrylo
+
+Task 1 - Omelchuk Olesia Task 2 - Baranovska Tetiana Task 3 - Shamanskyi Kyrylo
 
 ### Task 1
 
@@ -218,8 +217,8 @@ hist(num_of_errors_list,
      main = " The number of wrong bits in a decoded message",
      col = "lightblue");
 ```
-The random variable that counts the number of wrong bits in a decoded messages seems to have Binomial distribution, but actually it doesn't, because we can't calculate the probability of decoding each information bit correctly (that's because we aren't able to correctly decode received message with probability one if it has more than 1 error)
 
+The random variable that counts the number of wrong bits in a decoded messages seems to have Binomial distribution, but actually it doesn't, because we can't calculate the probability of decoding each information bit correctly (that's because we aren't able to correctly decode received message with probability one if it has more than 1 error)
 
 ### Task 2.
 
@@ -320,6 +319,7 @@ diff
 
 -   calculate the maximal difference between the two \textbf{c.d.f.}'s
 -   
+
 ```{r}
 maximal_difference_between_2_cdfs <- function(n) {
   mu <- N * lambda
@@ -396,8 +396,11 @@ Summarizing our work, we have examined poisson distribution, its convergence to 
     -   obtain the theoretical bounds on $N$ using the Markov inequality, Chernoff bound and Central Limit Theorem and compare the results;\
     -   with the predicted $N$ and thus $\nu$, simulate the realization $x_1,x_2,\dots,x_{100}$ of the $X_i$ and of the sum $S = X_1 + \cdots + X_{100}$;\
     -   repeat this $K$ times to get the sample $\mathbf{s}=(s_1,\dots,s_K)$ of total times until the $100^{\mathrm{th}}$ click;\
-    -   estimate the probability that the location is identified as safe and compare to the desired level $0.95$
-### Task1)
+    -   estimate the probability that the location is identified as safe and compare to the desired level $0.95$\
+
+### Task1) #simulate the realizations x1,x2,...,xn of the r.v. Xi and calculate the sample mean s = x; teamidnumber \<- 22
+
+```{r}
 #simulate the realizations x1,x2,...,xn of the r.v. Xi and calculate the sample mean s = x;
 teamidnumber <- 22
 
@@ -438,8 +441,11 @@ compare_res <- function(data, mu, sigma){
 compare_res(sample_means_50, mu, sigma)
 compare_res(sample_means_10, mean(sample_means_10), sd(sample_means_10))
 compare_res(sample_means_5, mean(sample_means_5), sd(sample_means_5))
+```
 
 ### Task2)
+
+```{r}
 v1 <- 32
 prob <- 0.95
 #Theoretical bound of N using the Markov
@@ -488,9 +494,8 @@ mean(k_times >= 1)
 ##express the event of interest in terms of the r.v. S := X1 + ··· + X100;
 S <- sum(sample_means[1:100])
 print(S)
-
-**Do not forget to include several sentences summarizing your work and the conclusions you have made!**
+```
 
 ### General summary and conclusions
 
-SUmmarize here what you've done, whether you solved the tasks, what difficulties you had etc
+In this lab we tried to use our theoretical knowledge of CLT, LLN and different types of distributions on practice while solving problems that are close to real life. It was surprising to understand that such many random processes can be described using random variables and can be analyzed using their properties and other probability rules. But still there are some moments when we do not have enough knowledge to fully understand the situation and predict the results.
